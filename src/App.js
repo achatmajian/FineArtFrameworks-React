@@ -11,6 +11,7 @@ import ViewMounting from "./components/view-mounting.js";
 import ViewSpacers from "./components/view-spacers.js";
 import ViewExtras from "./components/view-extras.js";
 import ViewOrders from "./components/view-orders.js";
+import LogIn from "./components/login.js";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <ViewMounting /> */}
       {/* <ViewSpacers /> */}
       {/* <ViewExtras /> */}
-      <ViewOrders />
+      {/* <ViewOrders /> */}
+      <LogIn />
     </div>
   );
 }
