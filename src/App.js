@@ -10,6 +10,7 @@ import ViewGlazing from "./components/view-glazing.js";
 import ViewMounting from "./components/view-mounting.js";
 import ViewSpacers from "./components/view-spacers.js";
 import ViewExtras from "./components/view-extras.js";
+import ViewOrders from "./components/view-orders.js";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/* <ViewGlazing /> */}
       {/* <ViewMounting /> */}
       {/* <ViewSpacers /> */}
-      <ViewExtras />
+      {/* <ViewExtras /> */}
+      <ViewOrders />
     </div>
   );
 }
