@@ -6,6 +6,7 @@ import ViewTable from "./components/view-table.js";
 import ViewClients from "./components/view-clients.js";
 import ViewUsers from "./components/view-users.js";
 import ViewLumber from "./components/view-lumber.js";
+import ViewGlazing from "./components/view-glazing.js";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <ViewTable /> */}
       {/* <ViewClients /> */}
       {/* <ViewUsers /> */}
-      <ViewLumber />
+      {/* <ViewLumber /> */}
+      <ViewGlazing />
     </div>
   );
 }
