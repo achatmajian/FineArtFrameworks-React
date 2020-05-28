@@ -1,9 +1,17 @@
+.wrapper{
+    /* background-color: lightsteelblue;
+    height: 100%; */
+}
+
 .table-container {
-    border: 1px solid black;
+    border: 1px solid lightgrey;
     border-radius: 10px;
     padding: 40px;
     margin-top: 40px;
     max-width: 90%;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 .page-title{
@@ -13,4 +21,5 @@
 
 .table{
     border: 1px solid lightgrey;
+    border-radius: 10px;
 }
