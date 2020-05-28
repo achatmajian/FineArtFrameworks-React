@@ -7,6 +7,7 @@ import "./view-table.css";
 class ViewTable extends React.Component {
     render() {
       return (
+        <div className="wrapper">
         <Container className="table-container" fluid>
           <h2 className="page-title">View Clients</h2>
           <Row>
@@ -82,6 +83,7 @@ class ViewTable extends React.Component {
             </Table>
         </Row>
 </Container>
+</div>
   
       );
     }
