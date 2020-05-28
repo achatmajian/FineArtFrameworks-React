@@ -21,7 +21,7 @@ class ViewTable extends React.Component {
               <InputGroup.Text id="basic-addon2">Search</InputGroup.Text>
             </InputGroup.Append>
           </InputGroup>
-            <Table responsive>
+            <Table className="table" responsive>
             <thead>
                 <tr>
                 <th>#</th>
@@ -49,7 +49,7 @@ class ViewTable extends React.Component {
                   <td>Brooklyn</td>
                   <td>NY</td>
                   <td>11211</td>
-                  <td><Button variant="primary">Edit</Button>{' '}</td>
+                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
                 </tr>
                 <tr>
                 <td>2</td>
@@ -62,7 +62,7 @@ class ViewTable extends React.Component {
                   <td>Brooklyn</td>
                   <td>NY</td>
                   <td>11211</td>
-                  <td><Button variant="primary">Edit</Button>{' '}</td>
+                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
                 </tr>
                 <tr>
                 <td>3</td>
@@ -75,9 +75,10 @@ class ViewTable extends React.Component {
                   <td>Brooklyn</td>
                   <td>NY</td>
                   <td>11211</td>
-                  <td><Button variant="primary">Edit</Button>{' '}</td>
+                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
                 </tr>
             </tbody>
+            
             </Table>
         </Row>
 </Container>
