@@ -7,6 +7,8 @@ import ViewClients from "./components/view-clients.js";
 import ViewUsers from "./components/view-users.js";
 import ViewLumber from "./components/view-lumber.js";
 import ViewGlazing from "./components/view-glazing.js";
+import ViewMounting from "./components/view-mounting.js";
+import ViewSpacers from "./components/view-spacers.js";
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
       {/* <ViewClients /> */}
       {/* <ViewUsers /> */}
       {/* <ViewLumber /> */}
-      <ViewGlazing />
+      {/* <ViewGlazing /> */}
+      {/* <ViewMounting /> */}
+      <ViewSpacers />
     </div>
   );
 }
