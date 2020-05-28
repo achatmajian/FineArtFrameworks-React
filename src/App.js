@@ -9,6 +9,7 @@ import ViewLumber from "./components/view-lumber.js";
 import ViewGlazing from "./components/view-glazing.js";
 import ViewMounting from "./components/view-mounting.js";
 import ViewSpacers from "./components/view-spacers.js";
+import ViewExtras from "./components/view-extras.js";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       {/* <ViewLumber /> */}
       {/* <ViewGlazing /> */}
       {/* <ViewMounting /> */}
-      <ViewSpacers />
+      {/* <ViewSpacers /> */}
+      <ViewExtras />
     </div>
   );
 }
