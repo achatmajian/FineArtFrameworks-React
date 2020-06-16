@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Button, ButtonGroup, Form, Row } from "react-bootstrap";
+import { Container, Button, Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
+import { Row } from "simple-flexbox";
 import "./new-client.css";
 
 
@@ -10,13 +11,15 @@ class NewClientForm extends React.Component {
         <div className="wrapper">
         <Container className="form-container" fluid>
           <h2 className="form-title">Add New Client</h2>
-          <p className="form-title">Starred Fields Are Required</p>
+          <Form.Text className="text-muted">Starred Fields Are Required</Form.Text>
 
             <Form>
                 <Form.Group controlId="new-client-name">
                     <Form.Label><strong>Client Name*</strong></Form.Label>
-                    <Form.Control className="input-field" type="text" placeholder="First Name" />
-                    <Form.Control type="text" placeholder="Last Name" />
+                    <Row horizontal="space-between">
+                        <Form.Control className="input-field" type="text" placeholder="First Name" style={{width: 220}}/>
+                        <Form.Control type="text" placeholder="Last Name" style={{width: 220}}/>
+                    </Row>
                     {/* <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                     </Form.Text> */}
@@ -40,17 +43,21 @@ class NewClientForm extends React.Component {
 
                 <Form.Group controlId="new-client-address">
                     <Form.Label><strong>Address*</strong></Form.Label>
-                    <Form.Control className="input-field" type="text" placeholder="Street Address" />
-                    <Form.Control className="input-field" type="text" placeholder="Apt #" />
-                    <Form.Control className="input-field" type="text" placeholder="City" />
-                    <Form.Control className="input-field" as="select" placeholder="State">
-                    <option>State</option>
-                    </Form.Control>
-                    {/* <Form.Control type="text" placeholder="State" /> */}
-                    <Form.Control type="text" placeholder="Zip" />
-                    {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                    </Form.Text> */}
+                        <Row horizontal="space-between">
+                            <Form.Control className="input-field" type="text" placeholder="Street Address" style={{width: 220}}/>
+                            <Form.Control className="input-field" type="text" placeholder="Apt #" style={{width: 220}}/>
+                        </Row>
+
+                        <Row horizontal="space-between">
+                            <Form.Control className="input-field" type="text" placeholder="City" style={{width: 150}}/>
+                            <Form.Control className="input-field" as="select" placeholder="State" style={{width: 130}}>
+                                <option>State</option>
+                            </Form.Control>
+                            <Form.Control type="text" placeholder="Zip" style={{width: 150}} />
+                        </Row>
+
+
+
                 </Form.Group>
 
                 <Form.Group controlId="new-client-type">
@@ -63,12 +70,10 @@ class NewClientForm extends React.Component {
 
                 <hr></hr>
 
-                <Row horizontal="center">
+                <Row horizontal="space-evenly" className="new-client-buttons">
 
-                <ButtonGroup aria-label="Basic example">
                     <Button variant="primary">Submit New Client</Button>{' '}
-                    <Button variant="secondary">Use Existing Client</Button>{' '}
-                </ButtonGroup>
+                    <Button variant="secondary">Use Existing Client</Button>{' '}           
 
                 </Row>
                 
