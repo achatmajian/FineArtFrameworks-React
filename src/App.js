@@ -14,6 +14,8 @@ import ViewOrders from "./components/view-orders.js";
 import LogIn from "./components/login.js";
 import NewClientForm from "./components/new-client-form.js";
 import CreateOrderHeader01 from './components/create-order-header-01.js';
+import OrderDetailsForm from './components/order-details-form.js';
+import CreateOrderHeader02 from './components/create-order-header-02.js';
 
 function App() {
   return (
@@ -31,8 +33,16 @@ function App() {
       {/* <ViewOrders /> */}
       {/* <LogIn /> */}
       
-      <CreateOrderHeader01 />
-      <NewClientForm />
+      {/* These 2 components make up the first "page" in the "Create Order" flow, where users enter client info */}
+      {/* <CreateOrderHeader01 /> */}
+      {/* <NewClientForm /> */}
+
+      {/* These 2 components make up the second "page" in the "Create Order" flow, where users enter order info */}
+      <CreateOrderHeader02 />
+      <OrderDetailsForm />
+      
+
+
     </div>
   );
 }
