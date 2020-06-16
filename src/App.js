@@ -13,6 +13,7 @@ import ViewExtras from "./components/view-extras.js";
 import ViewOrders from "./components/view-orders.js";
 import LogIn from "./components/login.js";
 import NewClientForm from "./components/new-client-form.js";
+import CreateOrderHeader01 from './components/create-order-header-01.js';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
       {/* <ViewExtras /> */}
       {/* <ViewOrders /> */}
       {/* <LogIn /> */}
+      
+      <CreateOrderHeader01 />
       <NewClientForm />
     </div>
   );
