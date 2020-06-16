@@ -31,6 +31,7 @@ function App() {
       {/* <ViewOrders /> */}
       {/* <LogIn /> */}
       
+      {/* These 2 components make up the "first page" in the "Create Order" flow */}
       <CreateOrderHeader01 />
       <NewClientForm />
     </div>
