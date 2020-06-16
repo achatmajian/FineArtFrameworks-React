@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Row } from "simple-flexbox";
-import "./new-client.css";
+import "./new-client-form.css";
 
 
 class NewClientForm extends React.Component {
@@ -20,25 +20,16 @@ class NewClientForm extends React.Component {
                         <Form.Control className="input-field" type="text" placeholder="First Name" style={{width: 220}}/>
                         <Form.Control type="text" placeholder="Last Name" style={{width: 220}}/>
                     </Row>
-                    {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                    </Form.Text> */}
                 </Form.Group>
 
                 <Form.Group controlId="new-client-email">
                     <Form.Label><strong>Email*</strong></Form.Label>
                     <Form.Control type="email" placeholder="client@gmail.com" />
-                    {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                    </Form.Text> */}
                 </Form.Group>
 
                 <Form.Group controlId="new-client-phone">
                     <Form.Label><strong>Phone Number*</strong></Form.Label>
                     <Form.Control type="text" placeholder="212-555-5555" />
-                    {/* <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                    </Form.Text> */}
                 </Form.Group>
 
                 <Form.Group controlId="new-client-address">
