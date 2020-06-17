@@ -47,10 +47,10 @@ function App() {
       <OrderDetailsForm /> */}
 
       {/* These components make up the thirs "page" in the "Create Order" flow, where users build a frame. The 4 forms will be in one container */}
-      {/* <SizingForm2 /> */}
-      {/* <ManufacturingForm /> */}
-      {/* <FittingForm /> */}
-      {/* <NotesForm /> */}
+      {/* <SizingForm2 />
+      <ManufacturingForm />
+      <FittingForm />
+      <NotesForm /> */}
       
       <BuildFramePage />
 
