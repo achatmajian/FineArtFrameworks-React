@@ -18,6 +18,7 @@ import OrderDetailsForm from './components/order-details-form.js';
 import CreateOrderHeader02 from './components/create-order-header-02.js';
 import SizingForm2 from './components/sizing-form-2.js';
 import ManufacturingForm from './components/manufacturing-form.js';
+import FittingForm from './components/fitting-form.js';
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
 
 
       {/* <SizingForm2 /> */}
-      <ManufacturingForm />
+      {/* <ManufacturingForm /> */}
+      <FittingForm />
       
 
 
