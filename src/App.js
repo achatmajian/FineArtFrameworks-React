@@ -17,6 +17,7 @@ import CreateOrderHeader01 from './components/create-order-header-01.js';
 import OrderDetailsForm from './components/order-details-form.js';
 import CreateOrderHeader02 from './components/create-order-header-02.js';
 import SizingForm2 from './components/sizing-form-2.js';
+import ManufacturingForm from './components/manufacturing-form.js';
 
 function App() {
   return (
@@ -42,7 +43,9 @@ function App() {
       {/* <CreateOrderHeader02 />
       <OrderDetailsForm /> */}
 
-      <SizingForm2 />
+
+      {/* <SizingForm2 /> */}
+      <ManufacturingForm />
       
 
 
