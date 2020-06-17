@@ -20,6 +20,7 @@ import SizingForm2 from './components/sizing-form-2.js';
 import ManufacturingForm from './components/manufacturing-form.js';
 import FittingForm from './components/fitting-form.js';
 import NotesForm from './components/notes-form.js';
+import BuildFramePage from './components/build-frame-page.js';
 
 function App() {
   return (
@@ -45,13 +46,13 @@ function App() {
       {/* <CreateOrderHeader02 />
       <OrderDetailsForm /> */}
 
-      {/* These 2 components make up the second "page" in the "Create Order" flow, where users enter order info */}
-      {/* <SizingForm2 /> */}
-      {/* <ManufacturingForm /> */}
-      {/* <FittingForm /> */}
-      <NotesForm />
+      {/* These components make up the thirs "page" in the "Create Order" flow, where users build a frame. The 4 forms will be in one container */}
+      {/* <SizingForm2 />
+      <ManufacturingForm />
+      <FittingForm />
+      <NotesForm /> */}
       
-
+      <BuildFramePage />
 
     </div>
   );
