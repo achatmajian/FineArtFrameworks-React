@@ -16,6 +16,7 @@ import NewClientForm from "./components/new-client-form.js";
 import CreateOrderHeader01 from './components/create-order-header-01.js';
 import OrderDetailsForm from './components/order-details-form.js';
 import CreateOrderHeader02 from './components/create-order-header-02.js';
+import SizingForm2 from './components/sizing-form-2.js';
 
 function App() {
   return (
@@ -38,8 +39,10 @@ function App() {
       {/* <NewClientForm /> */}
 
       {/* These 2 components make up the second "page" in the "Create Order" flow, where users enter order info */}
-      <CreateOrderHeader02 />
-      <OrderDetailsForm />
+      {/* <CreateOrderHeader02 />
+      <OrderDetailsForm /> */}
+
+      <SizingForm2 />
       
 
 
