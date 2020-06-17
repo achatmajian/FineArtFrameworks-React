@@ -19,6 +19,7 @@ import CreateOrderHeader02 from './components/create-order-header-02.js';
 import SizingForm2 from './components/sizing-form-2.js';
 import ManufacturingForm from './components/manufacturing-form.js';
 import FittingForm from './components/fitting-form.js';
+import NotesForm from './components/notes-form.js';
 
 function App() {
   return (
@@ -44,10 +45,11 @@ function App() {
       {/* <CreateOrderHeader02 />
       <OrderDetailsForm /> */}
 
-
+      {/* These 2 components make up the second "page" in the "Create Order" flow, where users enter order info */}
       {/* <SizingForm2 /> */}
       {/* <ManufacturingForm /> */}
-      <FittingForm />
+      {/* <FittingForm /> */}
+      <NotesForm />
       
 
 
