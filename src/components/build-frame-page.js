@@ -16,6 +16,10 @@ class BuildFramePage extends React.Component {
             <h1 className="jumbotron-content">Create Order</h1>
             <h4 className="jumbotron-content">3. Build Frames</h4>
             <ProgressBar now={60} label={`${60}%`} className="progress"></ProgressBar>
+            <Column horizontal="center" className="header-buttons">
+              <Button variant="primary" id="top-header-button" style={{width: 250}}>Submit Frames</Button>{' '}
+              <Button variant="outline-primary" style={{width: 150}}>Go Back</Button>{' '}           
+            </Column>
             </Jumbotron>
         </Column>
 
@@ -23,6 +27,10 @@ class BuildFramePage extends React.Component {
         <Container className="form-container" fluid>
           <h2 className="form-title">Build Frame</h2>
           <Form.Text className="text-muted">Starred Fields Are Required</Form.Text>
+            <Column horizontal="center" className="frame-container-buttons">
+              <Button variant="primary" id="top-header-button" style={{width: 200}}>Save Frame</Button>{' '}
+              <Button variant="outline-primary" style={{width: 150}}>Duplicate Frame</Button>{' '}           
+            </Column>
 
 
           {/* =========Sizing Container========= */}
@@ -417,6 +425,12 @@ class BuildFramePage extends React.Component {
                 
             </Form>
         </Container>
+
+        {/* <Row horizontal="space-evenly" className="frame-container-buttons">
+          <Button variant="primary" style={{width: 230}}>Save Frame</Button>{' '}
+          <Button variant="outline-primary" style={{width: 230}}>Duplicate Frame</Button>{' '}           
+        </Row> */}
+
 
 
         </Container>
