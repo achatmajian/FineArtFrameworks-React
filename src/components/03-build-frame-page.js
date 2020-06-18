@@ -3,7 +3,6 @@ import { Container, Button, Form, Checkbox, Jumbotron, ProgressBar } from "react
 import 'bootstrap/dist/css/bootstrap.css';
 import { Column, Row } from "simple-flexbox";
 import "./03-build-frame-page.css";
-// import "./create-order-header-01.css";
 
 
 class BuildFramePage extends React.Component {

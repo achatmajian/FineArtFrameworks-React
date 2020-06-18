@@ -42,7 +42,7 @@ class ViewOrders extends React.Component {
                   <td>5</td>
                   <td>4/18/2020</td>
                   <td>6/18/2020</td>
-                  <td><Button variant="primary" size="sm">View Order Details</Button>{' '}</td>
+                  <td><Button variant="primary" size="sm">View Order</Button>{' '}</td>
                 </tr>
                 <tr>
                   <td>002</td>
@@ -51,7 +51,7 @@ class ViewOrders extends React.Component {
                   <td>7</td>
                   <td>3/20/2020</td>
                   <td>5/20/2020</td>
-                  <td><Button variant="primary" size="sm">View Order Details</Button>{' '}</td>
+                  <td><Button variant="primary" size="sm">View Order</Button>{' '}</td>
                 </tr>
                 <tr>
                   <td>003</td>
@@ -60,7 +60,7 @@ class ViewOrders extends React.Component {
                   <td>3</td>
                   <td>2/11/2020</td>
                   <td>3/11/2020</td>
-                  <td><Button variant="primary" size="sm">View Order Details</Button>{' '}</td>
+                  <td><Button variant="primary" size="sm">View Order</Button>{' '}</td>
                 </tr>
             </tbody>
             
