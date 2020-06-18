@@ -21,6 +21,14 @@
     height: 30px;
 }
 
+.header-buttons{
+    margin-top: 30px;
+    }
+
+#top-header-button{
+    margin-bottom: 10px;
+}    
+
 .form-container {
     min-width: 800px;
     border: 1px solid lightgrey;
@@ -126,6 +134,8 @@
     border-radius: 10px;
 }
 
-.new-client-buttons{
+.frame-container-buttons{
 margin-top: 30px;
 }
+
+
