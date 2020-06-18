@@ -1,0 +1,141 @@
+.jumbotron{
+    margin-top: 50px;
+    width: 800px;
+    padding: 30px;
+    text-align: center;
+    height: auto;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 10px -6px #777;
+    -moz-box-shadow: 0 5px 10px -6px #777;
+    box-shadow: 0 5px 10px -6px #777;
+}
+
+.jumbotron-content{
+    margin-bottom: 20px;
+}
+
+.progress{
+    margin-top: 30px;
+    height: 30px;
+}
+
+.header-buttons{
+    margin-top: 30px;
+    }
+
+#top-header-button{
+    margin-bottom: 10px;
+}    
+
+.form-container {
+    min-width: 550px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    max-width: 30%;
+    -webkit-box-shadow: 0 5px 10px -6px #777;
+    -moz-box-shadow: 0 5px 10px -6px #777;
+    box-shadow: 0 5px 10px -6px #777;
+}
+
+.form-title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sizing-container {
+    min-width: 550px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    max-width: 30%;
+    -webkit-box-shadow: 0 5px 10px -6px #777;
+    -moz-box-shadow: 0 5px 10px -6px #777;
+    box-shadow: 0 5px 10px -6px #777;
+}
+
+.sizing-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.manufacturing-container {
+    min-width: 550px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    max-width: 30%;
+    -webkit-box-shadow: 0 5px 10px -6px #777;
+    -moz-box-shadow: 0 5px 10px -6px #777;
+    box-shadow: 0 5px 10px -6px #777;
+}
+
+.manufacturing-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.fitting-container {
+    min-width: 550px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    max-width: 30%;
+    -webkit-box-shadow: 0 5px 10px -6px #777;
+    -moz-box-shadow: 0 5px 10px -6px #777;
+    box-shadow: 0 5px 10px -6px #777;
+}
+
+.fitting-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.notes-container {
+    min-width: 550px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    max-width: 30%;
+    -webkit-box-shadow: 0 5px 10px -6px #777;
+    -moz-box-shadow: 0 5px 10px -6px #777;
+    box-shadow: 0 5px 10px -6px #777;
+}
+
+.notes-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.text-muted{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.input-margin {
+    margin-bottom: 10px;
+}
+
+.table{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.frame-container-buttons{
+margin-top: 30px;
+}
+
+
