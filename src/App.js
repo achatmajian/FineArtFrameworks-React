@@ -22,6 +22,7 @@ import FittingForm from './components/fitting-form.js';
 import NotesForm from './components/notes-form.js';
 import BuildFramePage from './components/03-build-frame-page.js';
 import OrderDetailsPage from './components/02-order-details-page.js';
+import NewClientPage from './components/01-client-info-page.js';
 
 function App() {
   return (
@@ -39,16 +40,12 @@ function App() {
       {/* <ViewOrders /> */}
       {/* <LogIn /> */}
       
-      {/* These 2 components make up the first "page" in the "Create Order" flow, where users enter client info */}
-      {/* <CreateOrderHeader01 /> */}
-      {/* <NewClientForm /> */}
+      {/* First "page" in the "Create Order" flow, where users enter client info */}
+      <NewClientPage />
+
 
       {/* Second "page" in the "Create Order" flow, where users enter order info. */}
-      {/* <CreateOrderHeader02 />
-      <OrderDetailsForm /> */}
-      <OrderDetailsPage />
-
-
+      {/* <OrderDetailsPage /> */}
 
       {/* Third "page" in the "Create Order" flow, where users build a frame. */}
       {/* <BuildFramePage /> */}
