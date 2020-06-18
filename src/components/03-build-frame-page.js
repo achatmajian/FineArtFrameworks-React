@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Button, Form, Checkbox, Jumbotron, ProgressBar } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Column, Row } from "simple-flexbox";
-import "./build-frame-page.css";
+import "./03-build-frame-page.css";
 // import "./create-order-header-01.css";
 
 
@@ -17,7 +17,7 @@ class BuildFramePage extends React.Component {
             <h4 className="jumbotron-content">3. Build Frames</h4>
             <ProgressBar now={60} label={`${60}%`} className="progress"></ProgressBar>
             <Column horizontal="center" className="header-buttons">
-              <Button variant="primary" id="top-header-button" style={{width: 250}}>Submit Frames</Button>{' '}
+              <Button variant="primary" id="top-header-button" style={{width: 200}}>Submit Order</Button>{' '}
               <Button variant="outline-primary" style={{width: 150}}>Go Back</Button>{' '}           
             </Column>
             </Jumbotron>
