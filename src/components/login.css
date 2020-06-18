@@ -1,11 +1,9 @@
-
-
-.table-container {
+.form-container {
     border: 1px solid lightgrey;
     border-radius: 10px;
     padding: 40px;
     margin-top: 40px;
-    max-width: 30%;
+    width: 300px;
     -webkit-box-shadow: 0 5px 10px -6px #777;
     -moz-box-shadow: 0 5px 10px -6px #777;
     box-shadow: 0 5px 10px -6px #777;

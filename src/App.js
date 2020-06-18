@@ -22,7 +22,8 @@ import FittingForm from './components/fitting-form.js';
 import NotesForm from './components/notes-form.js';
 import BuildFramePage from './components/03-build-frame-page.js';
 import OrderDetailsPage from './components/02-order-details-page.js';
-import NewClientPage from './components/01-client-info-page.js';
+import NewClientPage from './components/01-new-client-page.js';
+import ExistingClientPage from './components/01.1-existing-client-page.js';
 
 function App() {
   return (
@@ -38,10 +39,13 @@ function App() {
       {/* <ViewSpacers /> */}
       {/* <ViewExtras /> */}
       {/* <ViewOrders /> */}
+
+      {/* Log In "page" */}
       {/* <LogIn /> */}
       
       {/* First "page" in the "Create Order" flow, where users enter client info */}
-      <NewClientPage />
+      {/* <NewClientPage /> */}
+      <ExistingClientPage />
 
 
       {/* Second "page" in the "Create Order" flow, where users enter order info. */}

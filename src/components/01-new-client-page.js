@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Button, Form, Checkbox, Jumbotron, ProgressBar } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Column, Row } from "simple-flexbox";
-import "./01-client-info-page.css";
+import "./01-new-client-page.css";
 
 
 class NewClientPage extends React.Component {

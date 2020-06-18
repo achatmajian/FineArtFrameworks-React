@@ -8,7 +8,7 @@ class LogIn extends React.Component {
     render() {
       return (
         <div className="wrapper">
-        <Container className="table-container" fluid>
+        <Container className="form-container" fluid>
           <h2 className="page-title">Log In</h2>
           <Row>
 
