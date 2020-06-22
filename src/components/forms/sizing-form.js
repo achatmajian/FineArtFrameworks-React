@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Column, Row } from "simple-flexbox";
-import "./sizing-form-2.css";
+import "./sizing-form.css";
 
 
-class SizingForm2 extends React.Component {
+class SizingForm extends React.Component {
     render() {
       return (
         <div className="wrapper">
@@ -62,4 +62,4 @@ class SizingForm2 extends React.Component {
   }
 
 
-export default SizingForm2;
+export default SizingForm;
