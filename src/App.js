@@ -15,6 +15,7 @@ import BuildFramePage from './components/03-build-frame-page.js';
 import OrderDetailsPage from './components/02-order-details-page.js';
 import NewClientPage from './components/01-new-client-page.js';
 import ExistingClientPage from './components/01.1-existing-client-page.js';
+import EstimatePage from './components/04-estimate-page.js';
 
 function App() {
   return (
@@ -41,7 +42,10 @@ function App() {
       {/* <OrderDetailsPage /> */}
 
       {/* Third "page" in the "Create Order" flow, where users build a frame. */}
-      <BuildFramePage />
+      {/* <BuildFramePage /> */}
+
+      {/* Fourth "page" in the "Create Order" flow, where users get order breakdown and pricing estimate. */}
+      <EstimatePage />
 
     </div>
   );
