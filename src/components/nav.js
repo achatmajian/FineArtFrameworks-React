@@ -13,19 +13,19 @@ class Navigation extends React.Component {
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <NavDropdown title="Orders" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Create Order</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">View Orders</NavDropdown.Item>
+                    <NavDropdown.Item href="/build">Create Order</NavDropdown.Item>
+                    <NavDropdown.Item href="/orderdetails">View Orders</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="View" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Clients</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Users</NavDropdown.Item>
+                    <NavDropdown.Item href="/existingclient">Clients</NavDropdown.Item>
+                    <NavDropdown.Item href="/users">Users</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Materials" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Lumber</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Glazing</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Drymount</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Spacers</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.5">Extras</NavDropdown.Item>
+                    <NavDropdown.Item href="/lumber">Lumber</NavDropdown.Item>
+                    <NavDropdown.Item href="/glazing">Glazing</NavDropdown.Item>
+                    <NavDropdown.Item href="/mounting">Drymount</NavDropdown.Item>
+                    <NavDropdown.Item href="/spacers">Spacers</NavDropdown.Item>
+                    <NavDropdown.Item href="/orders">Extras</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
             {/* <Form inline>

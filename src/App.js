@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import './App.css';
 import Navigation from "./components/nav.js";
 import ViewTable from "./components/view-table.js";
@@ -17,38 +18,32 @@ import NewClientPage from './components/01-new-client-page.js';
 import ExistingClientPage from './components/01.1-existing-client-page.js';
 import EstimatePage from './components/04-estimate-page.js';
 
-function App() {
-  return (
-    <div className="App">
-      <Navigation />      
-      {/* <ViewTable /> */}
-      {/* <ViewClients />
-      <ViewUsers />
-      <ViewLumber />
-      <ViewGlazing />
-      <ViewMounting />
-      <ViewSpacers />
-      <ViewExtras />
-      <ViewOrders /> */}
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className='App'>
+          <Route path='*' component={Navigation}/>
+          <Route exact path='/' component={LogIn}/>
+          <Route exact path='/build' component={BuildFramePage}/>
+          <Route exact path='/orderdetails' component={OrderDetailsPage}/>
+          <Route exact path='/newclient' component={NewClientPage}/>
+          <Route exact path='/existingclient' component={ExistingClientPage}/>
+          <Route exact path='/estimate' component={EstimatePage}/>
+          <Route exact path='/table' component={ViewTable}/>
+          <Route exact path='/clients' component={ViewClients}/>
+          <Route exact path='/users' component={ViewUsers}/>
+          <Route exact path='/lumber' component={ViewLumber}/>
+          <Route exact path='/glazing' component={ViewGlazing}/>
+          <Route exact path='/mounting' component={ViewMounting}/>
+          <Route exact path='/spacers' component={ViewSpacers}/>
+          <Route exact path='/extras' component={ViewExtras}/>
+          <Route exact path='/orders' copmonent={ViewOrders}/>
 
-      {/* Log In "page" */}
-      {/* <LogIn /> */}
-      
-      {/* First "page" in the "Create Order" flow, where users enter client info */}
-      {/* <NewClientPage /> */}
-      {/* <ExistingClientPage /> */}
-
-      {/* Second "page" in the "Create Order" flow, where users enter order info. */}
-      {/* <OrderDetailsPage /> */}
-
-      {/* Third "page" in the "Create Order" flow, where users build a frame. */}
-      {/* <BuildFramePage /> */}
-
-      {/* Fourth "page" in the "Create Order" flow, where users get order breakdown and pricing estimate. */}
-      <EstimatePage />
-
-    </div>
-  );
+        </div>
+      </Router>
+    )
+  }
 }
 
 export default App;
