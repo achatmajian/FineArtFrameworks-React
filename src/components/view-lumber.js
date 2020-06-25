@@ -21,16 +21,16 @@ class ViewLumber extends React.Component {
 
   renderTableData() {
     return this.state.mats.map((mat, index) => {
-      const { face_width, frame_depth, material, finish, detail, cost } = mat;
+      const { id, face_width, frame_depth, material, finish, detail, cost } = mat;
       return (
         <tr key={material}>
-          <td>{material}</td>
-          <td>{finish}</td>
-          <td>{detail}</td>
-          <td>{face_width}</td>
-          <td>{frame_depth}</td>
-          <td>{cost}</td>
-          <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
+          <td style={{textTransform: 'capitalize'}}>{material}</td>
+          <td style={{textTransform: 'capitalize'}}>{finish}</td>
+          <td style={{textTransform: 'capitalize'}}>{detail}</td>
+          <td>{face_width}"</td>
+          <td>{frame_depth}"</td>
+          <td>${cost}</td>
+          <td><Button variant="primary" size="sm" data-id={id}>Edit</Button>{' '}</td>
         </tr>
       )
     })
