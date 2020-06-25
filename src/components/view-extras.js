@@ -5,6 +5,34 @@ import "./view-table.css";
 
 
 class ViewExtras extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { extras: [] };
+  }
+  componentDidMount() {
+    fetch("http://18.222.181.253:3001/api/extras")
+    .then(response => response.json())
+    .then(response => {
+      this.setState({ extras: response }, () => {
+        console.log(this.state.extras, "extras");
+      });
+    }
+    )
+  }
+
+  renderTableData() {
+    return this.state.extras.map((extra, index) => {
+      const { name, cost_type, cost } = extra;
+      return (
+        <tr key={name}>
+          <td>{name}</td>
+          <td>{cost_type}</td>
+          <td>{cost}</td>
+          <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
+        </tr>
+      )
+    })
+  }
     render() {
       return (
         <div className="wrapper">
@@ -31,21 +59,7 @@ class ViewExtras extends React.Component {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                  <td>Extra Strainer</td>
-                  <td>$6.00</td>
-                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
-                </tr>
-                <tr>
-                  <td>Painted Strainer</td>
-                  <td>$11.00</td>
-                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
-                </tr>
-                <tr>
-                  <td>Stretch Canvas</td>
-                  <td>$10.00</td>
-                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
-                </tr>
+              {this.renderTableData()}
             </tbody>
             
             </Table>

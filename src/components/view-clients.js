@@ -44,6 +44,7 @@ class ViewClients extends React.Component {
           <td>{city}</td>
           <td>{state}</td>
           <td>{zip_code}</td>
+          <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
         </tr>
       )
     })

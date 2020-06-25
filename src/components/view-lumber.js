@@ -5,6 +5,36 @@ import "./view-table.css";
 
 
 class ViewLumber extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { mats: [] };
+  }
+  componentDidMount() {
+    fetch("http://18.222.181.253:3001/api/materials")
+    .then(response => response.json())
+    .then(response => {
+      this.setState({ mats: response }, () => {
+        console.log(this.state.mats, "materials");
+      });
+    })
+  }
+
+  renderTableData() {
+    return this.state.mats.map((mat, index) => {
+      const { face_width, frame_depth, material, finish, detail, cost } = mat;
+      return (
+        <tr key={material}>
+          <td>{material}</td>
+          <td>{finish}</td>
+          <td>{detail}</td>
+          <td>{face_width}</td>
+          <td>{frame_depth}</td>
+          <td>{cost}</td>
+          <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
+        </tr>
+      )
+    })
+  }
     render() {
       return (
         <div className="wrapper">
@@ -35,24 +65,7 @@ class ViewLumber extends React.Component {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                  <td>Maple</td>
-                  <td>Natural</td>
-                  <td>Natural Flat</td>
-                  <td>3/8"</td>
-                  <td>1 1/2"</td>
-                  <td>$25.00</td>
-                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
-                </tr>
-                <tr>
-                  <td>Maple</td>
-                  <td>Natural</td>
-                  <td>Natural Flat</td>
-                  <td>3/8"</td>
-                  <td>1 1/2"</td>
-                  <td>$25.00</td>
-                  <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
-                </tr>
+                {this.renderTableData()}
             </tbody>
             
             </Table>
