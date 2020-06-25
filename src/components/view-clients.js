@@ -36,15 +36,15 @@ class ViewClients extends React.Component {
       return (
         <tr key={id}>
           <td>{id}</td>
-          <td>{first_name}</td>
-          <td>{last_name}</td>
+          <td style={{textTransform: 'capitalize'}}>{first_name}</td>
+          <td style={{textTransform: 'capitalize'}}>{last_name}</td>
           <td>{email}</td>
-          <td>{address_one}</td>
-          <td>{address_two}</td>
-          <td>{city}</td>
-          <td>{state}</td>
+          <td style={{textTransform: 'capitalize'}}>{address_one}</td>
+          <td style={{textTransform: 'capitalize'}}>{address_two}</td>
+          <td style={{textTransform: 'capitalize'}}>{city}</td>
+          <td style={{textTransform: 'capitalize'}}>{state}</td>
           <td>{zip_code}</td>
-          <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
+          <td><Button variant="primary" size="sm" data-id={id}>Edit</Button>{' '}</td>
         </tr>
       )
     })

@@ -22,13 +22,13 @@ class ViewExtras extends React.Component {
 
   renderTableData() {
     return this.state.extras.map((extra, index) => {
-      const { name, cost_type, cost } = extra;
+      const { id, name, cost_type, cost } = extra;
       return (
         <tr key={name}>
-          <td>{name}</td>
-          <td>{cost_type}</td>
-          <td>{cost}</td>
-          <td><Button variant="primary" size="sm">Edit</Button>{' '}</td>
+          <td style={{textTransform: 'capitalize'}}>{name}</td>
+          <td style={{textTransform: 'capitalize'}}>{cost_type}</td>
+          <td>${cost}</td>
+          <td><Button variant="primary" size="sm" data-id={id}>Edit</Button>{' '}</td>
         </tr>
       )
     })

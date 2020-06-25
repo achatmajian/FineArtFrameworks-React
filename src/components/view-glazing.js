@@ -5,16 +5,15 @@ import "./view-table.css";
 
 
 class ViewGlazing extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { glazings: [] };
   }
   componentDidMount() {
-    this.fetchglazing();
+    this.fetchGlazing();
   }
 
-  fetchglazing = () => {
+  fetchGlazing = () => {
     fetch("http://18.222.181.253:3001/api/glazings")
       .then(response => response.json())
       .then(response => this.handleSuccessResponse(response))
@@ -35,11 +34,11 @@ class ViewGlazing extends React.Component {
     return this.state.glazings.map((glazings, index) => {
       const { id, name, glazing_type, cost_type, cost } = glazings
       return (
-        <tr key={id}>
+        <tr key={name}>
           <td style={{textTransform: 'capitalize'}}>{glazing_type}</td>
           <td style={{textTransform: 'capitalize'}}>{name}</td>
-          <td style={{textTransform: 'capitalize'}}>{cost_type}</td>
           <td>${cost}</td>
+          <td style={{textTransform: 'capitalize'}}>{cost_type}</td>
           <td><Button variant="primary" size="sm" data-id={id}>Edit</Button>{' '}</td>
         </tr>
       )
