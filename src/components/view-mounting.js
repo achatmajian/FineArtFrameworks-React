@@ -73,15 +73,12 @@ class ViewMounting extends React.Component {
               <tbody>
                 {this.renderTableData()}
               </tbody>
-
             </Table>
           </Row>
         </Container>
       </div>
-
     );
   }
 }
-
 
 export default ViewMounting;
