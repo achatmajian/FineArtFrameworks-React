@@ -34,8 +34,7 @@ class ViewClients extends React.Component {
     return this.state.clients.map((client, index) => {
       const { id, first_name, last_name, email, address_one, address_two, city, state, zip_code } = client
       return (
-        <tr key={id}>
-          <td>{id}</td>
+        <tr key={email}>
           <td style={{textTransform: 'capitalize'}}>{first_name}</td>
           <td style={{textTransform: 'capitalize'}}>{last_name}</td>
           <td>{email}</td>
@@ -78,7 +77,6 @@ class ViewClients extends React.Component {
             <Table className="table" responsive>
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Email</th>
