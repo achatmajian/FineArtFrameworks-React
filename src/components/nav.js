@@ -8,10 +8,10 @@ class Navigation extends React.Component {
     render() {
       return (
     <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">Fine Art Frameworks</Navbar.Brand>
+        <Navbar.Brand href="/" style={ {fontSize: 30} } className="custom-brand"><img className="logo" src="../noun_Frame_993831 (2).png"></img>Fine Art Frameworks</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="ml-auto">
                 <NavDropdown title="Orders" id="basic-nav-dropdown">
                     <NavDropdown.Item href="/build">Create Order</NavDropdown.Item>
                     <NavDropdown.Item href="/orders">View Orders</NavDropdown.Item>
