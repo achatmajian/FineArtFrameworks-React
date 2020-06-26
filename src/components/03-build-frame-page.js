@@ -6,6 +6,18 @@ import "./03-build-frame-page.css";
 
 
 class BuildFramePage extends React.Component {
+//In the process of building this.  Going to get to create new client first.
+    // constructor(props) {
+    //     super(props);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
+    // }
+
+    // handleSubmit(event) {
+    //     event.preventDefault();
+    //     const data = new FormData(event.target);
+
+    //     fetch("")
+    // }
     render() {
       return (
         <div className="wrapper">
