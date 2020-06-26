@@ -14,10 +14,10 @@ class Navigation extends React.Component {
             <Nav className="mr-auto">
                 <NavDropdown title="Orders" id="basic-nav-dropdown">
                     <NavDropdown.Item href="/build">Create Order</NavDropdown.Item>
-                    <NavDropdown.Item href="/orderdetails">View Orders</NavDropdown.Item>
+                    <NavDropdown.Item href="/orders">View Orders</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="View" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/existingclient">Clients</NavDropdown.Item>
+                    <NavDropdown.Item href="/clients">Clients</NavDropdown.Item>
                     <NavDropdown.Item href="/users">Users</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Materials" id="basic-nav-dropdown">
@@ -25,7 +25,7 @@ class Navigation extends React.Component {
                     <NavDropdown.Item href="/glazing">Glazing</NavDropdown.Item>
                     <NavDropdown.Item href="/mounting">Drymount</NavDropdown.Item>
                     <NavDropdown.Item href="/spacers">Spacers</NavDropdown.Item>
-                    <NavDropdown.Item href="/orders">Extras</NavDropdown.Item>
+                    <NavDropdown.Item href="/extras">Extras</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
             {/* <Form inline>
