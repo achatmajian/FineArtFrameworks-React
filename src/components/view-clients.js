@@ -1,5 +1,6 @@
 import React from "react";
 import { Table, Container, Row, Button, InputGroup, FormControl } from "react-bootstrap";
+import Search from "./search.js";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./view-table.css";
 
@@ -30,19 +31,29 @@ class ViewClients extends React.Component {
     console.log("Error while fetching clients: ", error);
   }
 
+  searchTable = query => {
+    console.log("Looking for query: " + query)
+  }
+
+  formatPhoneNumber = phoneNumberString => {
+    var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
+    var match = cleaned.match(/^(1|)?(\d{3})(\d{3})(\d{4})$/)
+    if (match) {
+      var intlCode = (match[1] ? '+1 ' : '')
+      return [intlCode, '(', match[2], ') ', match[3], '-', match[4]].join('')
+    }
+    return null
+  }
+
   renderTableData() {
     return this.state.clients.map((client, index) => {
-      const { id, first_name, last_name, email, address_one, address_two, city, state, zip_code } = client
+      const { id, first_name, last_name, email, phone, address_one, address_two, city, state, zip_code } = client
       return (
         <tr key={email}>
-          <td style={{textTransform: 'capitalize'}}>{first_name}</td>
-          <td style={{textTransform: 'capitalize'}}>{last_name}</td>
+          <td style={{ textTransform: 'capitalize' }}>{first_name} {last_name}</td>
           <td>{email}</td>
-          <td style={{textTransform: 'capitalize'}}>{address_one}</td>
-          <td style={{textTransform: 'capitalize'}}>{address_two}</td>
-          <td style={{textTransform: 'capitalize'}}>{city}</td>
-          <td style={{textTransform: 'capitalize'}}>{state}</td>
-          <td>{zip_code}</td>
+          <td>{this.formatPhoneNumber(phone)}</td>
+          <td style={{ textTransform: 'capitalize' }}>{address_one} {address_two} {city}, {state} {zip_code}</td>
           <td><Button variant="primary" size="sm" data-id={id}>Edit</Button>{' '}</td>
         </tr>
       )
@@ -51,41 +62,19 @@ class ViewClients extends React.Component {
 
   render() {
     return (
-      // <div>
-      //   <h1 id="title">Some Bullshit</h1>
-      //   <table id="clients">
-      //     <tbody>
-      //       {this.renderTableData()}
-      //     </tbody>
-      //   </table>
-      // </div>
       <div className="wrapper">
-        <Container className="table-container" fluid>
+        <Container className="custom-table-container" fluid>
           <h2 className="page-title">View Clients</h2>
           <Row>
 
-            <InputGroup className="mb-3">
-              <FormControl
-                placeholder="Search Clients"
-                aria-label="Search Clients"
-                aria-describedby="basic-addon2"
-              />
-              <InputGroup.Append>
-                <InputGroup.Text id="basic-addon2">Search</InputGroup.Text>
-              </InputGroup.Append>
-            </InputGroup>
-            <Table className="table" responsive>
+            <Search searchTable={this.searchTable.bind(this)}/>
+            <Table id="my-table" className="table" responsive>
               <thead>
                 <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Address</th>
-                  <th>Apartment</th>
-                  <th>City</th>
-                  <th>State</th>
-                  <th>Zip</th>
+                  <th>Client Name</th>
+                  <th>Email Address</th>
+                  <th>Phone Number</th>
+                  <th>Shipping Address</th>
                   <th>Edit</th>
                 </tr>
               </thead>
