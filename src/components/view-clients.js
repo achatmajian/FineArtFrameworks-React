@@ -62,7 +62,7 @@ class ViewClients extends React.Component {
       const { id, first_name, last_name, email, phone, address_one, address_two, city, state, zip_code } = client
       const name = first_name + " " + last_name;
       return (
-        <tr key={ name }>
+        <tr key={ name , first_name, last_name, email }>
           <td style={{ textTransform: 'capitalize' }}>{first_name} {last_name}</td>
           <td>{email}</td>
           <td>{this.formatPhoneNumber(phone)}</td>
