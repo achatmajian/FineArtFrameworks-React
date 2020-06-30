@@ -44,6 +44,7 @@ class ViewClients extends React.Component {
       this.setState({clients: clientSearch});
     } else {
       this.setState({clients: this.state.allClients})
+      window.location.reload(false)
     }
   }
 
@@ -62,7 +63,7 @@ class ViewClients extends React.Component {
       const { id, first_name, last_name, email, phone, address_one, address_two, city, state, zip_code } = client
       const name = first_name + " " + last_name;
       return (
-        <tr key={ name , first_name, last_name, email }>
+        <tr key={ first_name, last_name }>
           <td style={{ textTransform: 'capitalize' }}>{first_name} {last_name}</td>
           <td>{email}</td>
           <td>{this.formatPhoneNumber(phone)}</td>
