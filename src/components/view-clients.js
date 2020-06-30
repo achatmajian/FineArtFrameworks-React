@@ -8,7 +8,7 @@ import "./view-table.css";
 class ViewClients extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { clients: [] };
+    this.state = { clients: [], allClients: [] };
   }
   componentDidMount() {
     this.fetchClients();
@@ -24,6 +24,7 @@ class ViewClients extends React.Component {
   handleSuccessResponse = response => {
     this.setState({ clients: response }, () => {
       console.log(this.state.clients, "clients");
+    this.setState({ allClients: this.state.clients });
     });
   }
 
@@ -32,7 +33,18 @@ class ViewClients extends React.Component {
   }
 
   searchTable = query => {
-    console.log("Looking for query: " + query)
+    console.log("Looking for query: " + query);
+    console.log(this.state.clients);
+    let clients = this.state.clients
+    let clientSearch = clients.filter((clients) => {
+      return JSON.stringify(clients).toLowerCase().includes(query.toLowerCase());
+    });
+    console.log(clientSearch);
+    if (query != "") {
+      this.setState({clients: clientSearch});
+    } else {
+      this.setState({clients: this.state.allClients})
+    }
   }
 
   formatPhoneNumber = phoneNumberString => {
@@ -48,8 +60,9 @@ class ViewClients extends React.Component {
   renderTableData() {
     return this.state.clients.map((client, index) => {
       const { id, first_name, last_name, email, phone, address_one, address_two, city, state, zip_code } = client
+      const name = first_name + " " + last_name;
       return (
-        <tr key={email}>
+        <tr key={ name , first_name, last_name, email }>
           <td style={{ textTransform: 'capitalize' }}>{first_name} {last_name}</td>
           <td>{email}</td>
           <td>{this.formatPhoneNumber(phone)}</td>
