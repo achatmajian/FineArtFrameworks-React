@@ -17,6 +17,7 @@ import OrderDetailsPage from './components/02-order-details-page.js';
 import NewClientPage from './components/01-new-client-page.js';
 import ExistingClientPage from './components/01.1-existing-client-page.js';
 import EstimatePage from './components/04-estimate-page.js';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
 class App extends Component {
   render() {
@@ -46,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withAuthenticator(App, true);
